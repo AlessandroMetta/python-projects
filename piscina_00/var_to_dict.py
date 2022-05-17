@@ -21,5 +21,12 @@ d = [
 ('Burton' , '1939')
 ]
 
+dic = {}
+
 for i in d:
-	dic[i[1]]
+    dic[i[1]] = i[0]
+
+sort = sorted(dic, reverse=True)
+
+for item in sort:
+    print(item, ":", dic[item])
