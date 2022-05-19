@@ -1,6 +1,6 @@
 from beverages import HotBeverage, Coffee, Tea, Chocolate, Cappuccino
-import random
 from typing import Type
+import random
 
 class CoffeeMachine():
     def __init__(self):
@@ -15,7 +15,7 @@ class CoffeeMachine():
             Exception.__init__("This coffee machine has to be repaired.")
     def repair(self):
         self.usage = 0
-    def serve(self, beverage: HotBeverage):
+    def serve(self, beverage: Type[HotBeverage]):
         if self.usage != 10:
             if random.choice([True, False]) == True:
                 return beverage()
@@ -24,9 +24,8 @@ class CoffeeMachine():
         else:
             raise self.BrokenMachineException()
 
-
 a = CoffeeMachine()
-CoffeeMachine.serve(Coffee())
+print(CoffeeMachine.serve(Coffee()).description())
 print(CoffeeMachine.serve(Cappuccino()).description())
 print(CoffeeMachine.serve(Chocolate()).description())
 print(CoffeeMachine.serve(Tea()).description())
