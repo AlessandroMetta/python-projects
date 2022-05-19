@@ -1,5 +1,6 @@
 from beverages import HotBeverage, Coffee, Tea, Chocolate, Cappuccino
 import random
+from typing import Type
 
 class CoffeeMachine():
     def __init__(self):
@@ -25,17 +26,17 @@ class CoffeeMachine():
 
 
 a = CoffeeMachine()
+CoffeeMachine.serve(Coffee())
+print(CoffeeMachine.serve(Cappuccino()).description())
+print(CoffeeMachine.serve(Chocolate()).description())
+print(CoffeeMachine.serve(Tea()).description())
+print(CoffeeMachine.serve(Cappuccino()).description())
 print(CoffeeMachine.serve(Coffee()).description())
-print(CoffeeMachine.serve(Coffee()).description())
-print(CoffeeMachine.serve(Coffee()).description())
-print(CoffeeMachine.serve(Coffee()).description())
-print(CoffeeMachine.serve(Coffee()).description())
-print(CoffeeMachine.serve(Coffee()).description())
-print(CoffeeMachine.serve(Coffee()).description())
-print(CoffeeMachine.serve(Coffee()).description())
-print(CoffeeMachine.serve(Coffee()).description())
-print(CoffeeMachine.serve(Coffee()).description())
-print(CoffeeMachine.serve(Coffee()).description())
+print(CoffeeMachine.serve(Chocolate()).description())
+print(CoffeeMachine.serve(Tea()).description())
+print(CoffeeMachine.serve(HotBeverage()).description())
+print(CoffeeMachine.serve(HotBeverage()).description())
+print(CoffeeMachine.serve(Tea()).description())
 try:
 	print(CoffeeMachine.serve(Coffee()).description())
 except Exception as e:
@@ -46,16 +47,16 @@ except Exception as e:
 	print(e)
 CoffeeMachine.rapair()
 print(CoffeeMachine.serve(Coffee()).description())
+print(CoffeeMachine.serve(Cappuccino()).description())
+print(CoffeeMachine.serve(Chocolate()).description())
+print(CoffeeMachine.serve(Tea()).description())
+print(CoffeeMachine.serve(Cappuccino()).description())
 print(CoffeeMachine.serve(Coffee()).description())
-print(CoffeeMachine.serve(Coffee()).description())
-print(CoffeeMachine.serve(Coffee()).description())
-print(CoffeeMachine.serve(Coffee()).description())
-print(CoffeeMachine.serve(Coffee()).description())
-print(CoffeeMachine.serve(Coffee()).description())
-print(CoffeeMachine.serve(Coffee()).description())
-print(CoffeeMachine.serve(Coffee()).description())
-print(CoffeeMachine.serve(Coffee()).description())
-print(CoffeeMachine.serve(Coffee()).description())
+print(CoffeeMachine.serve(Chocolate()).description())
+print(CoffeeMachine.serve(Tea()).description())
+print(CoffeeMachine.serve(HotBeverage()).description())
+print(CoffeeMachine.serve(HotBeverage()).description())
+print(CoffeeMachine.serve(Tea()).description())
 try:
 	print(CoffeeMachine.serve(Coffee()).description())
 except Exception as e:
