@@ -13,10 +13,13 @@ capital_cities = {
 "CO": "Denver"
 }
 
-if len(sys.argv) != 2:
-	exit(0)
-
-try:
-	print(capital_cities[states[sys.argv[1]]])
-except KeyError:
-        sys.exit("Unkown state.")
+if len(sys.argv) == 2:
+    for elem in capital_cities.items():
+        if elem[1] != sys.argv[1]:
+            continue
+        for element in states.items():
+            if element[1] != elem[0]:
+                continue
+            print(element[0])
+            break
+        break
