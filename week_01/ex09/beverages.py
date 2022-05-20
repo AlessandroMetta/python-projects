@@ -11,25 +11,25 @@ class Coffee(HotBeverage):
     def __init__(self):
         super().__init__(0.40, "coffee")
     def description(self):
-        return HotBeverage.description(self, "A coffee, to stay awake.")
+        return super().description("A coffee, to stay awake.")
 
 class Tea(HotBeverage):
     def __init__(self):
         super().__init__(n="tea")
     def description(self):
-        return HotBeverage.description(self, "Just some hot water in a cup.")
+        return super().description("Just some hot water in a cup.")
 
 class Chocolate(HotBeverage):
     def __init__(self):
         super().__init__(0.50, "chocolate")
     def description(self):
-        return HotBeverage.description(self, "Chocolate, sweet chocolate...")
+        return super().description("Chocolate, sweet chocolate...")
 
 class Cappuccino(HotBeverage):
     def __init__(self):
         super().__init__(0.45, "cappuccino")
     def description(self):
-        return HotBeverage.description(self, "Un po' di Italia nella sua tazza!")
+        return super().description("Un po' di Italia nella sua tazza!")
 
 def __main__():
     a = HotBeverage()
