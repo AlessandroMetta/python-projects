@@ -3,9 +3,8 @@ from typing import Type
 import random
 
 
-
-
 class CoffeeMachine():
+
     def __init__(self):
         self.usage = 0
 
@@ -33,11 +32,8 @@ class CoffeeMachine():
             raise self.BrokenMachineException()
 
 
-
-
-
-
 def __main__():
+
     machine = CoffeeMachine()
 
     print(CoffeeMachine.serve(machine, Coffee()).description())
@@ -81,7 +77,6 @@ def __main__():
     	print(CoffeeMachine.serve(machine, Coffee()).description())
     except Exception as e:
     	print(e)
-
 
 
 if __name__ == '__main__':
