@@ -37,45 +37,45 @@ def __main__():
 
     machine = CoffeeMachine()
 
-    print(CoffeeMachine.serve(machine, Coffee()).description())
-    print(CoffeeMachine.serve(machine, Cappuccino()).description())
-    print(CoffeeMachine.serve(machine, Chocolate()).description())
-    print(CoffeeMachine.serve(machine, Tea()).description())
-    print(CoffeeMachine.serve(machine, Cappuccino()).description())
-    print(CoffeeMachine.serve(machine, Coffee()).description())
-    print(CoffeeMachine.serve(machine, Chocolate()).description())
-    print(CoffeeMachine.serve(machine, Tea()).description())
-    print(CoffeeMachine.serve(machine, HotBeverage()).description())
-    print(CoffeeMachine.serve(machine, HotBeverage()).description())
+    print(machine.serve(Coffee()).description())
+    print(machine.serve(Cappuccino()).description())
+    print(machine.serve(Chocolate()).description())
+    print(machine.serve(Tea()).description())
+    print(machine.serve(Cappuccino()).description())
+    print(machine.serve(Coffee()).description())
+    print(machine.serve(Chocolate()).description())
+    print(machine.serve(Tea()).description())
+    print(machine.serve(HotBeverage()).description())
+    print(machine.serve(HotBeverage()).description())
 
     try:
-    	print(CoffeeMachine.serve(machine, Coffee()).description())
+    	print(machine.serve(Coffee()).description())
     except Exception as e:
     	print(e)
     try:
-    	print(CoffeeMachine.serve(machine, Coffee()).description())
+    	print(machine.serve(Coffee()).description())
     except Exception as e:
     	print(e)
 
-    CoffeeMachine.repair(machine)
+    machine.repair()
 
-    print(CoffeeMachine.serve(machine, Coffee()).description())
-    print(CoffeeMachine.serve(machine, Cappuccino()).description())
-    print(CoffeeMachine.serve(machine, Chocolate()).description())
-    print(CoffeeMachine.serve(machine, Tea()).description())
-    print(CoffeeMachine.serve(machine, Cappuccino()).description())
-    print(CoffeeMachine.serve(machine, Coffee()).description())
-    print(CoffeeMachine.serve(machine, Chocolate()).description())
-    print(CoffeeMachine.serve(machine, Tea()).description())
-    print(CoffeeMachine.serve(machine, HotBeverage()).description())
-    print(CoffeeMachine.serve(machine, HotBeverage()).description())
+    print(machine.serve(Coffee()).description())
+    print(machine.serve(Cappuccino()).description())
+    print(machine.serve(Chocolate()).description())
+    print(machine.serve(Tea()).description())
+    print(machine.serve(Cappuccino()).description())
+    print(machine.serve(Coffee()).description())
+    print(machine.serve(Chocolate()).description())
+    print(machine.serve(Tea()).description())
+    print(machine.serve(HotBeverage()).description())
+    print(machine.serve(HotBeverage()).description())
     
     try:
-    	print(CoffeeMachine.serve(machine, Coffee()).description())
+    	print(machine.serve(Coffee()).description())
     except Exception as e:
     	print(e)
     try:
-    	print(CoffeeMachine.serve(machine, Coffee()).description())
+    	print(machine.serve(Coffee()).description())
     except Exception as e:
     	print(e)
 
