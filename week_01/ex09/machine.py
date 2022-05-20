@@ -1,5 +1,4 @@
 from beverages import HotBeverage, Coffee, Tea, Chocolate, Cappuccino
-from typing import Type
 import random
 
 
@@ -10,18 +9,20 @@ class CoffeeMachine():
 
     class EmptyCup(HotBeverage):
         def __init__(self):
-            HotBeverage.__init__(self, 0.90, "empty cup")
+            super().__init__(0.90, "empty cup")
         def description(self):
             return HotBeverage.description(self, "An empty cup?! Gimme my money back!")
 
     class BrokenMachineException(Exception):
         def __init__(self):
-            Exception.__init__(self, 'This coffee machine has to be repaired.')
+            super().__init__('This coffee machine has to be repaired.')
 
     def repair(self):
         self.usage = 0
 
-    def serve(self, beverage: Type[HotBeverage]):
+    def serve(self, beverage):
+        if not isinstance(beverage, HotBeverage):
+            raise TypeError()
         if self.usage != 10:
             self.usage += 1
             if random.choice([True, False]) == True:
