@@ -15,7 +15,7 @@ class CoffeeMachine():
 
     class BrokenMachineException(Exception):
         def __init__(self):
-            super().__init__('This coffee machine has to be repaired.')
+            super().__init__("This coffee machine has to be repaired.")
 
     def repair(self):
         self.usage = 0
